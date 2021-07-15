@@ -1,0 +1,64 @@
+﻿@using BookingSystem.Operations
+@model BookingSystem.Models.Booking
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Booking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerformanceId" class="control-label"></label>
+                <input asp-for="PerformanceId" class="form-control" readonly="readonly" value="@DatabaseManager.PerformanceId" />
+                <span asp-validation-for="PerformanceId" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberFullPrice" class="control-label"> </label>
+                <input asp-for="NumberFullPrice" class="form-control" value="0" />
+                <span asp-validation-for="NumberFullPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberConcessionPrice" class="control-label"></label>
+                <input asp-for="NumberConcessionPrice" class="form-control" value="0" />
+                <span asp-validation-for="NumberConcessionPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="StoreEmail"  value="true"/> Add my email to the Repertory mailing list.
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enter Booking" Booking" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
