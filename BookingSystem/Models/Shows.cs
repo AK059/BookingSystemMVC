@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Models
 {
+    //add show class here
     public class Shows
     {
         public int Id { get; set; }

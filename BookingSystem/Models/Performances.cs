@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Models
 {
+    //add performance class here
     public class Performances
     {
         public int Id { get; set; }

@@ -12,7 +12,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Name) 
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
@@ -36,10 +36,13 @@
             @Html.DisplayFor(model => model.ConcessionPrice)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>
+    <div>
+        <a href="portfolio-item.html"><img src="~/images/delete-show.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="p1" style="width:auto" height="200" /></a>
+    </div>
 </div>

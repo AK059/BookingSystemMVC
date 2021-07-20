@@ -48,10 +48,13 @@
             @Html.DisplayFor(model => model.TotalCost)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>
+    <div>
+        <a href="portfolio-item.html"><img src="~/images/cancle booking.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="p1" style="width:auto" height="200" /></a>
+    </div>
 </div>

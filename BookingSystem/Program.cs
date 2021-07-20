@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BookingSystem
 {
+   
     public class Program
     {
         public static void Main(string[] args)

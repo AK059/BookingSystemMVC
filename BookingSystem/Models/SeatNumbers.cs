@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Models
 {
+    //add class here
     public class SeatNumbers
     {
         public int Id { get; set; }
