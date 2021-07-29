@@ -35,6 +35,7 @@ namespace BookingSystem
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
